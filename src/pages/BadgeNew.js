@@ -3,7 +3,7 @@ import './styles/BadgeNew.css'
 import badgeHeader from '../images/badge-header.svg'
 import Navbar from '../components/Navbar.js'
 import Badge from '../components/Badge.js'
-
+import BadgeForm from '../components/BadgeForm.js'
 
 class BadgeNew extends React.Component {
   render () {
@@ -17,7 +17,7 @@ class BadgeNew extends React.Component {
 
         <div className="container">
           <div className="row">
-            <div className="column">
+            <div className="col-6">
               <Badge
                 firstName = "Mario"
                 lastName = "Mancilla"
@@ -25,6 +25,9 @@ class BadgeNew extends React.Component {
                 jobTitle = "Ruby on Rails Developer"
                 avatarUrl = "https://static.platzi.com/media/avatars/avatars/mariormt17_16089d54-49bc-4747-a459-c23cf4b26b05.jpg"
               />
+            </div>
+            <div className="col-6">
+              <BadgeForm />
             </div>
           </div>
         </div>
