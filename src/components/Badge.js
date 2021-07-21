@@ -4,6 +4,14 @@ import './styles/Badge.css'
 
 class Badge extends React.Component {
   render () {
+    const {
+      firstName,
+      lastName,
+      twitter,
+      jobTitle,
+      avatarUrl
+     } = this.props
+
     return (
       <div className="Badge">
         <div className="Badge__header">
@@ -12,14 +20,14 @@ class Badge extends React.Component {
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
-            src="https://static.platzi.com/media/avatars/avatars/mariormt17_16089d54-49bc-4747-a459-c23cf4b26b05.jpg"
+            src={avatarUrl}
             alt="avatar"
           />
-          <h1>Mario <br /> Mancilla</h1>
+          <h1>{firstName} <br /> {lastName}</h1>
         </div>
         <div className="Badge__section-info">
-          <h3>Ruby on Rails Developer</h3>
-          <div>@MarioManTin</div>
+          <h3>{jobTitle}</h3>
+          <div>@{twitter}</div>
         </div>
         <div className="Badge__footer">
           #PlatziConf
