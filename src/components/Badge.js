@@ -10,7 +10,7 @@ class Badge extends React.Component {
       twitter,
       jobTitle,
       avatarUrl
-     } = this.props
+    } = this.props
 
     return (
       <div className="Badge">
@@ -20,14 +20,14 @@ class Badge extends React.Component {
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
-            src={avatarUrl}
-            alt="avatar"
+            src={avatarUrl ? avatarUrl : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"}
+            alt=""
           />
-          <h1>{firstName} <br /> {lastName}</h1>
+          <h1>{firstName ? firstName : "Your"} <br /> {lastName ? lastName : "Name"}</h1>
         </div>
         <div className="Badge__section-info">
-          <h3>{jobTitle}</h3>
-          <div>@{twitter}</div>
+          <h3>{jobTitle ? jobTitle : "Your Job"}</h3>
+          <div>@{twitter ? twitter : "your_twitter_user"}</div>
         </div>
         <div className="Badge__footer">
           #PlatziConf

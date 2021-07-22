@@ -5,6 +5,8 @@ import './global.css'
 import BadgeNew from './pages/BadgeNew.js';
 
 ReactDOM.render (
-  <BadgeNew />,
+  <React.StrictMode>
+    <BadgeNew />
+  </React.StrictMode>,
   document.getElementById('app')
 );
