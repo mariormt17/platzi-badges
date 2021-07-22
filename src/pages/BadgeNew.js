@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/BadgeNew.css'
-import badgeHeader from '../images/badge-header.svg'
+import badgeHeader from '../images/platziconf-logo.svg'
 import Navbar from '../components/Navbar.js'
 import Badge from '../components/Badge.js'
 import BadgeForm from '../components/BadgeForm.js'

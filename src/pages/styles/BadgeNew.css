@@ -6,3 +6,8 @@
   margin-bottom: 1rem;
   color: #ffffff;
 }
+
+.BadgeNew__hero img {
+  margin-left: 10%;
+  height: 9rem;
+}
