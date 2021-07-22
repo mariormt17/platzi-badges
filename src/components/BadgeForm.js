@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/BadgeForm.css'
 
 class BadgeForm extends React.Component {
   constructor (props) {
@@ -24,11 +25,11 @@ class BadgeForm extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="form__container">
         <h1>New Attendant</h1>
         <form>
-          <div className="form-group">
-            <label>First Name</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">First Name</label>
             <input
               className="form-control"
               type="text"
@@ -38,8 +39,8 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Last Name</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">Last Name</label>
             <input
               className="form-control"
               type="text"
@@ -49,8 +50,8 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Email</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">Email</label>
             <input
               className="form-control"
               type="email"
@@ -60,8 +61,8 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Job Title</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">Job Title</label>
             <input
               className="form-control"
               type="text"
@@ -71,8 +72,8 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Twitter</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">Twitter</label>
             <input
               className="form-control"
               type="text"
@@ -82,8 +83,8 @@ class BadgeForm extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Avatar URL</label>
+          <div className="form-group mb-3">
+            <label className="mb-2">Avatar URL</label>
             <input
               className="form-control"
               type="text"

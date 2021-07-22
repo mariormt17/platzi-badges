@@ -1,0 +1,23 @@
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: -120px;
+}
+
+.form__container h1 {
+  align-self: center;
+  color: #ffffff;
+  letter-spacing: 5px;
+}
+
+.form__container form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form__container form label {
+  font-size: 18px;
+}
