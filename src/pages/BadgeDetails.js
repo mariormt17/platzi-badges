@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles/BadgeDetails.css'
 import conferenceLogo from '../images/platziconf-logo.svg'
 import Badge from '../components/Badge';
+import DeleteBadgeModal from '../components/DeleteBadgeModal'
 
 function BadgeDetails (props) {
   const badge = props.data;
@@ -36,8 +37,22 @@ function BadgeDetails (props) {
           <div className="col">
             <h2>Actions</h2>
             <div>
-              <div><Link to={`/badges/${badge.id}/edit`} className="btn btn-primary mb-4">Edit</Link></div>
-              <div><Link to={`/badges/${badge.id}/edit`} className="btn btn-danger">Delete</Link></div>
+              <div>
+                <Link to={`/badges/${badge.id}/edit`} className="btn btn-primary mb-4">Edit</Link>
+              </div>
+              <div>
+                <button
+                  className="btn btn-danger"
+                  onClick={props.onOpenModal}
+                >
+                  Delete
+                </button>
+                <DeleteBadgeModal
+                  isOpen={props.modalIsOpen}
+                  onClose={props.onCloseModal}
+                  onDeleteBadge={props.onDeleteBadge}
+                />
+              </div>
             </div>
           </div>
         </div>
