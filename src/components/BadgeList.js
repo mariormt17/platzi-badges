@@ -23,22 +23,27 @@ class BadgeList extends React.Component {
       <ul className="list-unstyled BadgesList">
         {this.props.badges.map((badge)=>{
             return(
-              <li key={badge.id} className="BadgesListItem">
-                  <Gravatar
-                    className="BadgesListItem__avatar"
-                    source={badge.email || 'email@example.com'}
-                    avatarUrl={badge.avatarUrl}
-                  />
-                  <div>
+              <Link
+                className="text-reset text-decoration-none"
+                to={`/badges/${badge.id}/edit`}
+              >
+                <li key={badge.id} className="BadgesListItem">
+                    <Gravatar
+                      className="BadgesListItem__avatar"
+                      source={badge.email || 'email@example.com'}
+                      avatarUrl={badge.avatarUrl}
+                      />
                     <div>
-                      <strong>{badge.firstName} {badge.lastName}</strong>
+                      <div>
+                        <strong>{badge.firstName} {badge.lastName}</strong>
+                      </div>
+                      <div className="Twitter__name">
+                          <span className="Twitter__logo"></span>@{badge.twitter}
+                      </div>
+                      <div>{badge.jobTitle}</div>
                     </div>
-                    <div className="Twitter__name">
-                        <span className="Twitter__logo"></span>@{badge.twitter}
-                    </div>
-                    <div>{badge.jobTitle}</div>
-                  </div>
-              </li>
+                </li>
+              </Link>
             )
         })}
       </ul>
