@@ -19,15 +19,11 @@ class BadgeForm extends React.Component {
   //   });
   // }
 
-  handleClick = (e) => {
-    console.log("Button was clicked")
-  }
-
   render () {
     return (
       <div className="form__container">
         <h1>New Attendant</h1>
-        <form>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group mb-3">
             <label className="mb-2">First Name</label>
             <input
@@ -96,8 +92,6 @@ class BadgeForm extends React.Component {
 
           <button
             className="btn btn-primary"
-            onClick={this.handleClick}
-            type="button"
           >
             Save
           </button>
