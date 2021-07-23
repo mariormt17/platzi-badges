@@ -50,7 +50,7 @@ class Badges extends React.Component {
 
     if (this.state.error) {
       return (
-        <PageError />
+        <PageError error={this.state.error} />
       );
     }
 
