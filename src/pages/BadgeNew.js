@@ -4,11 +4,14 @@ import badgeHeader from '../images/platziconf-logo.svg'
 import Badge from '../components/Badge.js'
 import BadgeForm from '../components/BadgeForm.js'
 import api from '../api';
+import Loader from '../components/Loader'
 
 class BadgeNew extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      loading: false,
+      error: null,
       form: {}
     };
   }
@@ -44,6 +47,12 @@ class BadgeNew extends React.Component {
   }
 
   render () {
+    if (this.state.loading) {
+      return (
+        <Loader />
+      );
+    }
+
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">
@@ -66,6 +75,7 @@ class BadgeNew extends React.Component {
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
+                error={this.state.error}
               />
             </div>
           </div>
