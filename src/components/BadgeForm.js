@@ -84,7 +84,7 @@ class BadgeForm extends React.Component {
             <input
               className="form-control"
               type="text"
-              name="avatar"
+              name="avatarUrl"
               onChange={this.props.onChange}
               placeholder="Enter your avatar url"
             />
