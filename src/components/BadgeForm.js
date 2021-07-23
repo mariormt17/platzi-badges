@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/BadgeForm.css'
 
 class BadgeForm extends React.Component {
   // handleChange = (e) => {

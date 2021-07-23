@@ -19,3 +19,20 @@
   position: relative;
   top: -30%;
 }
+
+.form__container h1 {
+  align-self: center;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.form__container form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form__container form label {
+  font-size: 18px;
+}
