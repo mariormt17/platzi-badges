@@ -5,18 +5,18 @@ class BadgeList extends React.Component {
   render () {
     return (
       <ul className="list-unstyled BadgesList">
-        {this.props.badges.map((badge)=>{
+        {this.props.data.results.map((character)=>{
             return(
-              <li key={badge.id} className="BadgesListItem">
-                  <img src={badge.avatarUrl} alt="" className="BadgesListItem__avatar"/>
+              <li key={character.id} className="BadgesListItem">
+                  <img src={character.image} alt="" className="BadgesListItem__avatar"/>
                   <div>
                     <div>
-                      <strong>{badge.firstName} {badge.lastName}</strong>
+                      <strong>{character.name} - {character.origin.name}</strong>
                     </div>
                     <div className="Twitter__name">
-                        <span className="Twitter__logo"></span>@{badge.twitter}
+                        <span className="Twitter__logo"></span>@{character.name}
                     </div>
-                    <div>{badge.jobTitle}</div>
+                    <div>{character.gender}</div>
                   </div>
               </li>
             )

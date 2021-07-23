@@ -33,3 +33,9 @@
 .Badges__buttons a:hover {
   box-shadow: 1px 1px 15px -5px #7DCD40;
 }
+
+.loader {
+  display: flex;
+  align-self: start;
+  justify-content: center;
+}
