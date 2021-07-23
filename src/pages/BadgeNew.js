@@ -40,6 +40,7 @@ class BadgeNew extends React.Component {
                 twitter = {this.state.form.twitter}
                 jobTitle = {this.state.form.jobTitle}
                 avatarUrl = {this.state.form.avatar}
+                email = {this.state.form.email}
               />
             </div>
             <div className="col-6">
