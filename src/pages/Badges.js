@@ -55,7 +55,8 @@ class Badges extends React.Component {
       error: null,
       data: {
         results: []
-      }
+      },
+      nextPage: 1
     }
   }
 
@@ -67,12 +68,16 @@ class Badges extends React.Component {
     this.setState ({ loading: true, error: null });
 
     try{
-      const response = await fetch("https://rickandmortyapi.com/api/character");
+      const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.nextPage}`);
       const data = await response.json();
 
       this.setState ({
         loading: false,
-        data: data
+        data: {
+          info: data.info,
+          results: [].concat(this.state.data.results, data.results)
+        },
+        nextPage: this.state.nextPage + 1
       });
     } catch (error) {
       this.setState ({
@@ -83,6 +88,10 @@ class Badges extends React.Component {
   }
 
   render () {
+    if (this.state.error) {
+      return "Error: " + this.state.error.message;
+    }
+
     return (
       <React.Fragment>
         <div className="Badges">
@@ -102,12 +111,24 @@ class Badges extends React.Component {
               <BadgeList data={this.state.data}/>
             </div>
           </div>
+          <div className="btn-load-more">
+            {!this.state.loading && (
+              <button
+              className="btn btn-primary"
+              onClick={() => this.fetchCharacters()}
+              >
+                Load More
+              </button>
+            )}
+          </div>
         </div>
+
         {this.state.loading && (
           <div className="loader">
             <Loader />
           </div>
         )}
+
       </React.Fragment>
     );
   }
